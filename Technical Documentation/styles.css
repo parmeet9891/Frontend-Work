@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000;
+  --color-light-black: #222222;
+  --color-grey: #c1c1c1;
+  --border-btm: 1px solid var(--color-black);
+  --bg-grey: #f7f7f7;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+#main-doc {
+  color: var(--color-black);
+  display: flex;
+}
+
+#navbar {
+  width: 21%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  border-right: 3px solid var(--color-grey);
+  position: fixed;
+  min-width: 250px;
+}
+
+.scroll-list {
+  overflow-y: scroll;
+  height: 90vh;
+}
+
+#header {
+  padding: 1rem;
+  width: 21%;
+  position: fixed;
+  background-color: white;
+  min-width: 250px;
+}
+
+#header h1 {
+  font-size: 1.3rem;
+}
+
+.list li:first-of-type {
+  border-top: var(--border-btm);
+}
+
+.list li {
+  padding: 1rem;
+  border-bottom: var(--border-btm);
+}
+
+.navbar__content {
+  margin-top: 4rem;
+}
+
+.content {
+  margin-left: 18rem;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.section__heading {
+  font-size: 1.6rem;
+}
+
+.main-section h4 {
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--color-light-black);
+}
+
+.content__para {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-light-black);
+}
+
+.section__lists,
+.nested__list {
+  padding: 0.5rem 0.75rem 0 4rem;
+}
+
+.section__lists li {
+  font-size: 0.9rem;
+  color: var(--color-light-black);
+  margin-bottom: 1rem;
+}
+
+.content__code {
+  background-color: var(--bg-grey);
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin: 0 1rem 0.75rem 1.5rem;
+}
+
+.code-div {
+  width: 80%;
+}
+
+/* ------------------MEDIA QUERIES------------------*/
+
+@media (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  #header {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-content {
+    border: var(--border-btm);
+    height: 50%;
+  }
+
+  .scroll-list {
+    text-align: left;
+    max-height: 270px;
+    border: 2px solid var(--color-light-black);
+  }
+
+  .content {
+    margin: 22rem auto;
+  }
+}
